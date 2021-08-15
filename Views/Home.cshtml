@@ -1,9 +1,22 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Home>
-    
+
 @{
 	Layout = "Master.cshtml";
 }
 
 @* the fun starts here *@
 
-@Model.Title
+<h1>@Model.Title</h1>
+
+@Model.MainContent
+
+<div style="color: @Model.ColorName">
+
+	<p>Your favorite color is: @Model.ColorName</p>
+
+</div>
+
+@if (Model.ShowImage)
+{
+	<img style="width: 500px" src="/media/5msponjb/max-bohme-nd477obf3i4-unsplash.jpg" title="Mexican">
+}
