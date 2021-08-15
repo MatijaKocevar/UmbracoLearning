@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "13358d79cbbae7d1")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "39a1473e383f808")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.3")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -48,13 +48,6 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Color Name: Please enter your favorite color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		[ImplementPropertyType("colorName")]
-		public virtual string ColorName => global::Umbraco.Web.PublishedModels.BasicContentControls.GetColorName(this);
-
-		///<summary>
 		/// Main Content: Enter the main content for this page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
@@ -62,39 +55,24 @@ namespace Umbraco.Web.PublishedModels
 		public virtual global::System.Web.IHtmlString MainContent => global::Umbraco.Web.PublishedModels.BasicContentControls.GetMainContent(this);
 
 		///<summary>
-		/// Show Image
+		/// Page Title: Enter a title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		[ImplementPropertyType("showImage")]
-		public virtual bool ShowImage => global::Umbraco.Web.PublishedModels.BasicContentControls.GetShowImage(this);
-
-		///<summary>
-		/// Title: Enter a title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		[ImplementPropertyType("title")]
-		public virtual string Title => global::Umbraco.Web.PublishedModels.BasicContentControls.GetTitle(this);
+		[ImplementPropertyType("pageTitle")]
+		public virtual string PageTitle => global::Umbraco.Web.PublishedModels.BasicContentControls.GetPageTitle(this);
 	}
 
 	// Mixin Content Type with alias "basicContentControls"
 	/// <summary>Basic Content Controls</summary>
 	public partial interface IBasicContentControls : IPublishedContent
 	{
-		/// <summary>Color Name</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		string ColorName { get; }
-
 		/// <summary>Main Content</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
 		global::System.Web.IHtmlString MainContent { get; }
 
-		/// <summary>Show Image</summary>
+		/// <summary>Page Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		bool ShowImage { get; }
-
-		/// <summary>Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		string Title { get; }
+		string PageTitle { get; }
 	}
 
 	/// <summary>Basic Content Controls</summary>
@@ -123,17 +101,6 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
-		/// Color Name: Please enter your favorite color
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		[ImplementPropertyType("colorName")]
-		public virtual string ColorName => GetColorName(this);
-
-		/// <summary>Static getter for Color Name</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		public static string GetColorName(IBasicContentControls that) => that.Value<string>("colorName");
-
-		///<summary>
 		/// Main Content: Enter the main content for this page
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
@@ -145,26 +112,15 @@ namespace Umbraco.Web.PublishedModels
 		public static global::System.Web.IHtmlString GetMainContent(IBasicContentControls that) => that.Value<global::System.Web.IHtmlString>("mainContent");
 
 		///<summary>
-		/// Show Image
+		/// Page Title: Enter a title
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		[ImplementPropertyType("showImage")]
-		public virtual bool ShowImage => GetShowImage(this);
+		[ImplementPropertyType("pageTitle")]
+		public virtual string PageTitle => GetPageTitle(this);
 
-		/// <summary>Static getter for Show Image</summary>
+		/// <summary>Static getter for Page Title</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		public static bool GetShowImage(IBasicContentControls that) => that.Value<bool>("showImage");
-
-		///<summary>
-		/// Title: Enter a title
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		[ImplementPropertyType("title")]
-		public virtual string Title => GetTitle(this);
-
-		/// <summary>Static getter for Title</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.15.1")]
-		public static string GetTitle(IBasicContentControls that) => that.Value<string>("title");
+		public static string GetPageTitle(IBasicContentControls that) => that.Value<string>("pageTitle");
 	}
 
 	/// <summary>Folder</summary>
